@@ -8,6 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 	<head>
 		<title>@LayneGranados | Home :: w3layouts</title>
+		<meta charset="utf-8" /> 
 		<link rel="shortcut icon" type="image/x-icon" href="web/images/fav-icon.png" />
 		<link href="web/css/bootstrap.css" rel='stylesheet' type='text/css' />
 		<link href="web/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
@@ -70,7 +71,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <a href="#page-top">
                 	<div class="about-grids">
 	                    <a href="#"> 
-	                    	<img src="web/images/logo.png" title="@LayneGranados" />
+	                    	<img style="float:left; margin-right:10px;" src="web/images/logo.png" title="@LayneGranados" />
 				        	<h3>Layne Granados Mogollón</h3>
 	                    </a>
                     </div>
@@ -208,84 +209,113 @@ License URL: http://creativecommons.org/licenses/by/3.0/
          <!----//End-skillls---->
          <!----start-portfolio---->
          <div id="port" class="container portfolio-main">
-         		<div class="text-center div-head">
-	        		<h2>MY PROJECTS</h2>
-	        		<p>This is a summary of the more significant projects I have worked</p>
-	        	</div>
-	        	<!-- start-portfolio-script-->
-					<script src="web/js/hover_pack.js"></script>
-					<script type="text/javascript" src="web/js/jquery.mixitup.min.js"></script>
-					<script type="text/javascript">
-						$(function () {
-							var filterList = {
-								init: function () {
-								
-									// MixItUp plugin
-									// http://mixitup.io
-									$('#portfoliolist').mixitup({
-										targetSelector: '.portfolio',
-										filterSelector: '.filter',
-										effects: ['fade'],
-										easing: 'snap',
-										// call the hover effect
-										onMixEnd: filterList.hoverEffect()
-									});				
-								
-								},
-								hoverEffect: function () {
-									// Simple parallax effect
-									$('#portfoliolist .portfolio').hover(
-										function () {
-											$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
-											$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
-										},
-										function () {
-											$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
-											$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
-										}		
-									);				
-								
-								}
+     		<div class="text-center div-head">
+        		<h2>MY PROJECTS</h2>
+        		<p>This is a summary of the more significant projects I have worked</p>
+        	</div>
+        	<!-- start-portfolio-script-->
+				<script src="web/js/hover_pack.js"></script>
+				<script type="text/javascript" src="web/js/jquery.mixitup.min.js"></script>
+				<script type="text/javascript">
+					$(function () {
+						var filterList = {
+							init: function () {
+							
+								// MixItUp plugin
+								// http://mixitup.io
+								$('#portfoliolist').mixitup({
+									targetSelector: '.portfolio',
+									filterSelector: '.filter',
+									effects: ['fade'],
+									easing: 'snap',
+									// call the hover effect
+									onMixEnd: filterList.hoverEffect()
+								});				
+							
+							},
+							hoverEffect: function () {
+								// Simple parallax effect
+								$('#portfoliolist .portfolio').hover(
+									function () {
+										$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+										$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+									},
+									function () {
+										$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+										$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+									}		
+								);				
+							
+							}
+				
+						};
+						// Run the show!
+						filterList.init();
+					});	
+				</script>
+				<!--//End-portfolio-script-->
+				<ul id="filters" class="clearfix">
+					<li>
+						<span class="filter active" data-filter="mall-manager clinical-images card comparator logo web">
+							ALL PROJECTS
+						</span>
+					</li>
+					<li>
+						<span class="filter active" data-filter="mall-manager">
+							MALL MANAGER SOFTWARE
+						</span>
+					</li>
+					<li>
+						<span class="filter" data-filter="clinical-images">
+							CLINICAL IMAGES VIEWER SOFTWARE
+						</span>
+					</li>
+					<li>
+						<span class="filter" data-filter="comparator">
+							COMPARATOR
+						</span>
+					</li>
+					<li>
+						<span class="filter" data-filter="mall-inspeccionzonas">
+							MALL MANAGER SOFTWARE - CHECKING PLACES
+						</span>
+					</li>
+					<li>
+						<span class="filter" data-filter="card">
+							SCHOOL MANAGER SOFTWARE
+						</span>
+					</li>
 					
-							};
-							// Run the show!
-							filterList.init();
-						});	
-					</script>
-					<!--//End-portfolio-script-->
-					<ul id="filters" class="clearfix">
-						<li>
-							<span class="filter active" data-filter="app card comparator logo web">
-								MALL MANAGER SOFTWARE
-							</span>
-						</li>
-						<li>
-							<span class="filter" data-filter="app">
-								CLINICAL IMAGES VIEWER SOFTWARE
-							</span>
-						</li>
-						<li>
-							<span class="filter" data-filter="comparator">
-								COMPARATOR
-							</span>
-						</li>
-						<li>
-							<span class="filter" data-filter="app">
-								MALL MANAGER SOFTWARE - CHECKING PLACES
-							</span>
-						</li>
-						<li>
-							<span class="filter" data-filter="card">
-								SCHOOL MANAGER SOFTWARE
-							</span>
-						</li>
-						
-					</ul>
-					<div id="portfoliolist">
-					
-					<div 
-					class="portfolio comparator mix_all" 
-					data-cat="comparator" style="display: inline-block; opacity: 1;">
+				</ul>
+				<div id="portfoliolist">
+
+					<div class="portfolio mall-manager mix_all" data-cat="mall-manager" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
+							    <img class="p-img" src="web/images/mall-manager/collage.jpg" />
+							    <div class="b-wrapper">
+						     		<h2 class="b-animate b-from-left    b-delay03 ">
+									    <img src="web/images/link-ico.png" alt=""/>
+									</h2>
+						  		</div>
+						  	</a>
+		                </div>
+					</div>
+
+					<div class="portfolio clinical-images mix_all" data-cat="clinical-images" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
+							    <img class="p-img" src="web/images/clinical-images/collage.jpg" />
+							    <div class="b-wrapper">
+							     	<h2 class="b-animate b-from-left    b-delay03 ">
+							     		<img src="web/images/link-ico.png" alt=""/>
+							     	</h2>
+							  	</div>
+						    </a>
+		                </div>
+					</div>
+				
+					<div class="portfolio comparator mix_all" data-cat="comparator" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper">		
 							<a 
 							data-toggle="modal" 
@@ -302,25 +332,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		                </div>
 					</div>	
 
-					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+					<div class="portfolio mall-inspeccionzonas mix_all" data-cat="mall-inspeccionzonas" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper">		
 							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
-							    <img class="p-img" src="web/images/p2.jpg" />
+							    <img class="p-img" src="web/images/mall-inspeccionzonas/collage.jpg" />
 							    <div class="b-wrapper">
-						     		<h2 class="b-animate b-from-left    b-delay03 ">
-									    <img src="web/images/link-ico.png" alt=""/>
-									</h2>
-						  		</div>
-						  	</a>
+							        <h2 class="b-animate b-from-left    b-delay03 ">
+							     		<img src="web/images/link-ico.png" alt=""/>
+							     	</h2>
+							  	</div>
+						    </a>
 		                </div>
 					</div>	
 
-					<div class="portfolio web mix_all" data-cat="web" style="display: inline-block; opacity: 1;">
+					<div class="portfolio school-manager mix_all" data-cat="school-manager" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper">		
 							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
-							    <img class="p-img" src="web/images/p3.jpg" />
+							    <img class="p-img" src="web/images/school-manager/collage.jpg" />
 							    <div class="b-wrapper">
-							     	<h2 class="b-animate b-from-left    b-delay03 ">
+							        <h2 class="b-animate b-from-left    b-delay03 ">
 							     		<img src="web/images/link-ico.png" alt=""/>
 							     	</h2>
 							  	</div>
@@ -328,52 +358,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		                </div>
 					</div>
 
-					<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper">		
-							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
-							    <img class="p-img" src="web/images/p4.jpg" />
-							    <div class="b-wrapper">
-							        <h2 class="b-animate b-from-left    b-delay03 ">
-							     		<img src="web/images/link-ico.png" alt=""/>
-							     	</h2>
-							  	</div>
-						    </a>
-		                </div>
-					</div>	
-
-					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper">		
-							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
-							    <img class="p-img" src="web/images/p5.jpg" />
-							    <div class="b-wrapper">
-							        <h2 class="b-animate b-from-left    b-delay03 ">
-							     		<img src="web/images/link-ico.png" alt=""/>
-							     	</h2>
-							  	</div>
-						    </a>
-		                </div>
-					</div>	
-
-					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper">		
-							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
-							    <img class="p-img" src="web/images/p6.jpg" />
-							    <div class="b-wrapper">
-							        <h2 class="b-animate b-from-left    b-delay03 ">
-							        	<img src="web/images/link-ico.png" alt=""/>
-							        </h2>
-							  	</div>
-						    </a>
-		                </div>
-					</div>	
-
 					<div class="clearfix"> 
 					</div>	
+
 					<a class="more-ports text-center" href="#">
 						<span> 
 						</span>
 					</a>																																				
-				</div>
+			    </div>
 		</div>
          <!----//End-portfolio---->
          <!----start-words---->
